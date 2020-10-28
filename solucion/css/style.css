@@ -1,0 +1,233 @@
+body{
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+}
+h1{
+    margin:0;
+}
+:root{
+    --lime-green: hsl(163, 72%, 41%);
+    --bright-red: rgb(220, 65, 76);
+
+    --facebook: hsl(208, 92%, 53%);
+    --twitter: hsl(203, 89%, 53%);
+    --instagram1: hsl(37, 97%, 70%);
+    --instagram2:  hsl(329, 70%, 58%);
+    --youTube: hsl(348, 97%, 39%);
+
+    --white: hsl(0, 0%, 100%);
+    --veryPaleBlue: rgb(236,240,249);
+    --lightGrayishBlue: hsl(227, 47%, 96%);
+    --darkGrayishBlue: hsl(228, 12%, 44%);
+    --veryDarkBlue: hsl(230, 17%, 14%);
+
+    --toggle-light: hsl(230, 22%, 74%);
+    --togle-dark1: hsl(210, 78%, 56%);
+    --togle-dark2: hsl(146, 68%, 55%);
+
+    --header-light: rgb(246, 247, 254);
+    
+}
+
+.header{
+    padding-top: 3em;
+    border-bottom: 50px solid var(--header-light);
+    background-color: var(--header-light);
+    padding-bottom: 80px;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+}
+
+.header-total{
+    margin: 0.5em 0;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--darkGrayishBlue);
+    border-bottom: 1px solid var(--veryDarkBlue);
+    padding-bottom: 1.5em;
+}
+
+.top-cards{
+    margin-top: -47px;
+}
+
+.wraper{
+    padding: 0 20px;
+}
+
+.grid{
+    display: grid;
+    grid-row-gap: 22px;
+}
+
+
+.card{
+    text-align: center;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    overflow: hidden;
+    background-color: var(--veryPaleBlue);
+    padding-bottom: 15px;
+} 
+
+.card-title{
+    margin-top: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--darkGrayishBlue);
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.card-title img{
+    margin-right: 5px;
+}
+
+.card::before{
+    content: "";
+    height: 4px;
+    display: block;
+    background-color: var(--facebook);
+}
+
+.card.facebook::before{
+    background-color: var(--facebook);
+}
+
+.card.twitter::before{
+    background-color: var(--twitter);
+}
+
+.card.instagram::before{
+    background-image: linear-gradient(to right, var(--instagram1) 0%, var(--instagram2) 100%)
+}
+
+.card.youtube::before{
+    background-color: var(--youTube);
+}
+
+.card-followers{
+    margin: 20px 0;
+}
+.card-followers-number{
+    font-size: 55px;
+    font-weight: 700;
+}
+.card-followers-title{
+    display: block;
+    text-transform: uppercase;
+    color: var(--darkGrayishBlue);
+    font-size: 1em;
+    letter-spacing: 0.5em;
+}
+
+.card-today{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.porcentaje-up{
+    color: var(--lime-green);
+}
+.porcentaje-down{
+    color: var(--bright-red);
+}
+
+.card-today img{
+    margin-right: 4px;
+}
+
+/* overview */
+
+.overview{
+    /* border: 1px solid pink; */
+    margin-bottom: 3.5em;
+    margin-top: 4em;
+}
+.grid-overview{
+    display: grid;
+    grid-row-gap: 17px;
+}
+
+h2{
+    font-size: 2em;
+    margin-bottom: 1.1em;
+    color: var(--darkGrayishBlue);
+}
+
+.card-small{
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2.5em;
+    font-weight: bold;
+    padding: 1.7em;
+    background-color: var(--veryPaleBlue);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.card-small p{
+    margin:0;
+}
+.card-small-views{
+    /* border: 1px solid green; */
+    text-align: left;
+    font-size: 1.15em;
+    color: var(--darkGrayishBlue);
+}
+.card-small-icon{
+    /* border: 1px solid orange; */
+    text-align: right;
+}
+.card-small-number{
+    /* border: 1px solid purple; */
+    text-align: left;
+    font-size: 2.8em;
+    line-height: .9em;
+}
+.card-small-porcentaje{
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.card-small-porcentaje img{
+    margin-right: 2px;
+    margin-bottom: 5px;
+}
+
+/* RESPONSIVE */
+
+@media screen and (min-width: 480px){
+    .grid, .grid-overview{
+        /* border: 1px solid purple; */
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2em;
+    }
+    .wraper{
+        max-width: 1440px;
+        margin: auto;
+    }
+}
+@media screen and (min-width: 768px){
+    .grid, .grid-overview{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media screen and (min-width: 1024px){
+    .grid, .grid-overview{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
